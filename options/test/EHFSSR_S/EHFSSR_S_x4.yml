@@ -1,0 +1,47 @@
+name: EHFSSR_S_x4
+model_type: ImageRestorationModel
+scale: 4
+num_gpu: 1 # set num_gpu: 0 for cpu mode
+manual_seed: 10
+
+# dataset and data loader settings
+datasets:
+  test0:
+    name: Flickr1024
+    type: PairedImageSRLRDataset
+    dataroot_gt: datasets/STSR/test/Flickr1024/HR
+    dataroot_lq: datasets/STSR/test/Flickr1024/LR/X4
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: EHFSSR_S
+  up_scale: 4
+  dim: 48
+  groups: 5
+  num: 6
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/EHFSSR_S_x4.pth
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  save_img: true
+  grids: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_skimage_ssim
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
