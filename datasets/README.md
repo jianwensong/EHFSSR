@@ -1,55 +1,6 @@
 Only a few pairs of example data are presented in this folder. Refer to the related references in the manuscript for the complete data. 
 
-### Datasets for EFATSR
-The structure of the training set is as follows:
-```
-|-- datasets
-    |-- SISR
-        |-- train
-            |-- DIV2K
-                |-- HR
-                |-- LR_bicubic
-                    |-- X2
-                    |-- X3
-                    |-- X4
-```
-The structure of the testing sets is as follows:
-```
-|-- datasets
-    |-- SISR
-        |-- test
-            |-- Set5
-                |-- HR
-                |-- LR
-                    |-- X2
-                    |-- X3
-                    |-- X4
-            |-- Set14
-                |-- HR
-                |-- LR
-                    |-- X2
-                    |-- X3
-                    |-- X4
-            |-- B100
-                |-- HR
-                |-- LR
-                    |-- X2
-                    |-- X3
-                    |-- X4
-            |-- Urban100
-                |-- HR
-                |-- LR
-                    |-- X2
-                    |-- X3
-                    |-- X4
-            |-- Manga109
-                |-- HR
-                |-- LR
-                    |-- X2
-                    |-- X3
-                    |-- X4
-```
-### Datasets for EFATSSR
+### Datasets for EHFSSR
 The structure of the training set is as follows:
 ```
 |-- datasets
