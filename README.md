@@ -10,7 +10,8 @@ pip install -r requirements.txt
 python setup.py develop
 ```
 ## Datasets
-- EHFSSR/EHFSSR-S
+- EHFSSR/EHFSSR_S
+
 |  Training Set   | Testing Set   |
 |  ----  | ----  |
 |  Flickr1024 + Middlebury | KITTI2012 + KITTI2015 + Middlebury + Flickr1024  |
